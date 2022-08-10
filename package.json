@@ -1,0 +1,31 @@
+{
+  "name": "quantitativenft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx hardhat compile",
+    "test": "set TS_NODE_TRANSPILE_ONLY=1&&npx hardhat test",
+    "deploy:test": "npx hardhat deploy --network localhost",
+    "accounts:rinkeby": "npx hardhat accounts --network rinkeby"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@openzeppelin/contracts": "^4.7.0",
+    "@openzeppelin/contracts-upgradeable": "^4.7.0",
+    "@openzeppelin/hardhat-upgrades": "^1.19.0",
+    "@types/node-fetch": "^2.6.2",
+    "cli-progress": "^3.11.2",
+    "dotenv": "^16.0.1",
+    "hardhat": "^2.10.0",
+    "hardhat-deploy": "^0.11.11",
+    "hardhat-tracer": "^1.1.0-rc.6",
+    "moment-timezone": "^0.5.34",
+    "node-fetch": "^2.6.7",
+    "prettier-plugin-solidity": "^1.0.0-dev.22",
+    "proxy-agent": "^5.0.0"
+  }
+}
