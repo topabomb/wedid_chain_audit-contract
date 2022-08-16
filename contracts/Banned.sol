@@ -39,8 +39,16 @@ contract Banned is OwnableUpgradeable {
         EnumerableSet.add(whiteList, dapp);
     }
 
+    function removeWhite(address dapp) public onlyOwner {
+        EnumerableSet.remove(whiteList, dapp);
+    }
+
     function addBlack(address dapp) public onlyOwner {
         EnumerableSet.add(blackList, dapp);
+    }
+
+    function removeBlack(address dapp) public onlyOwner {
+        EnumerableSet.remove(blackList, dapp);
     }
 
     function setMode(BannedMode _mode) public onlyOwner {

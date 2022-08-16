@@ -1,13 +1,18 @@
 {
   "manifestVersion": "3.2",
   "admin": {
-    "address": "0xd6Fcd69E809a3fFfcc22F7d600cf47F959330Fcc",
-    "txHash": "0xf2a3cd7fc21e5eeb460bf4d51d95c67764ecd3314d0ef84b9d997ede1cead94b"
+    "address": "0xDDf1c62Ec0dce69577C52622370D961755737272",
+    "txHash": "0xf365d5fca1edb8dafaa8309710423606b56db4f6324a88bf6b9499d2cf939f96"
   },
   "proxies": [
     {
       "address": "0x4913af02327F8584dD70FccEBcE09FC7b84dCc3F",
       "txHash": "0xcaf431a3d61c20e9ba3663194095a1aab256ffa01039fc44827d980c006a9eb3",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x515CD910c6BF90f0B2f9F052F275AA5e0933d840",
+      "txHash": "0x4bd5b55ef14cf274c84b3fa19976fc8c3023a82d873d03d6430d0c535948b04b",
       "kind": "transparent"
     }
   ],
@@ -135,6 +140,157 @@
             "numberOfBytes": "64"
           },
           "t_struct(Set)578_storage": {
+            "label": "struct EnumerableSet.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "da5f955a370c7053758cd6d4fbb7852e5a8d22b1665afbb267c9003929a90a97": {
+      "address": "0xEFC6aCb6a9706Dfc9847e3B2A06530FAA946Bf5f",
+      "txHash": "0x895fdbc480a4bd0022247ce49f5719e92e10b70f77413cda932b79f90af59143",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "mode",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_enum(BannedMode)9473",
+            "contract": "Banned",
+            "src": "contracts\\Banned.sol:15"
+          },
+          {
+            "label": "whiteList",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_struct(AddressSet)9171_storage",
+            "contract": "Banned",
+            "src": "contracts\\Banned.sol:16"
+          },
+          {
+            "label": "blackList",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_struct(AddressSet)9171_storage",
+            "contract": "Banned",
+            "src": "contracts\\Banned.sol:17"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(BannedMode)9473": {
+            "label": "enum Banned.BannedMode",
+            "members": [
+              "white",
+              "black",
+              "allowAll",
+              "denyAll"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AddressSet)9171_storage": {
+            "label": "struct EnumerableSet.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)8870_storage",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Set)8870_storage": {
             "label": "struct EnumerableSet.Set",
             "members": [
               {
