@@ -35,7 +35,12 @@ const config: HardhatUserConfig = {
       accounts: accounts(),
     },
     localhost: {
-      url: 'http://localhost:9933',
+      url: 'http://127.0.0.1:9933',
+      chainId: 1942,
+      accounts: accounts(),
+    },
+    wedid_dev: {
+      url: 'https://devchain.nawarat.io',
       chainId: 1942,
       accounts: accounts(),
     },
