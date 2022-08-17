@@ -10,7 +10,7 @@ const task = async (args: any, hre: HardhatRuntimeEnvironment) => {
   console.log(banned.interface.encodeFunctionData('isBanned', ['0xbD4e7CCc76b0891dC26e853a953219A303bB6749']));
 
   console.log(`✅ Banned(${banned.address}),Mode(${await banned.mode()})`);
-  if (Number(args.mode) < 4 && Number(args.mode) >= 0) {
+  if ('view' in args && args.mode && Number(args.mode) < 4 && Number(args.mode) >= 0) {
     const newMode = Number(args.mode);
     if (Number(await banned.mode()) != newMode) {
       const tx = await banned.setMode(newMode);

@@ -6,8 +6,13 @@
   "scripts": {
     "build": "npx hardhat compile",
     "test": "set TS_NODE_TRANSPILE_ONLY=1&&npx hardhat test",
-    "deploy:test": "npx hardhat deploy --network localhost",
-    "accounts:rinkeby": "npx hardhat accounts --network rinkeby"
+    "deploy:localhost": "npx hardhat deploy --network localhost",
+    "deploy:wedid_dev": "npx hardhat deploy --network wedid_dev",
+    "accounts:wedid_dev": "npx hardhat accounts --network wedid_dev",
+    "bannedmode:view:wedid_dev": "npx hardhat setBannedMode --view --network wedid_dev",
+    "bannedmode:allow:wedid_dev": "npx hardhat setBannedMode --mode 2 --network wedid_dev",
+    "bannedmode:deny:wedid_dev": "npx hardhat setBannedMode --mode 3 --network wedid_dev",
+    "sendtoken:wedid_dev": "npx hardhat sendGldToken --amount 0.1 --target 0x4C77F966Da53B6fFeBD9e661F669b6E6C42D455e --network wedid_dev"
   },
   "keywords": [],
   "author": "",
